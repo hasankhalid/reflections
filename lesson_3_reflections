@@ -1,1 +1,6 @@
+Q - When would you want to use a remote repository rather than keeping all your work local?
+Ans - We would use a remote repository in cases where we need to collaborate with other people or open our source code for opensource collaboration. 
+Multiple remote commits would be made to a single repository in case where we are collaborating on developing our product with other people.
+Another advantage of remote repositories is that one can clone them on any device and resume the work where they left off (This would ofcourse be in 
+the case that we have a private account)
 
