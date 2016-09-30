@@ -1,0 +1,24 @@
+Q - How did viewing a diff between two versions of a file help you see the bug that was introduced?
+Ans - The diff and the FC are two very handy tools to compare large files of code. In code of 1000s of lines, it is a very tedious task to find the differences manually. The MAC diff command makes it quite
+simple through the plus and minus signs. It becomes much simpler to identify which line was removed and what was that particular line replaced with.
+
+Q - How could having easy access to the entire history of the file make you more efficient programmer in the long term?
+Ans -  Many a times the changes introduced in a particular software system are on a temporary basis and/or are pilot based. In such a project it is pertinent to move to and fro with the changes made in
+the document and version control is central as we do not have to rewrite stuff to revert back in versions. We can just restore a previous version. That makes it a good programming practice. It makes
+sure that the programmer does not make a mistake in recreating the entire project and it saves time and resources through direct restoration of previous files.
+
+Q - What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+Ans - The biggest problem with automatic saving is that it could save versions of the file that would not even compile, because of incomplete logic, missing syntax, precisely incomplete code. The
+advantage of such a system would be that it would save changes in case the person coding procrastinates. It gets rid of the user error. The advantage of manually saving is that it gives the coder the
+degree of flexibility and freedom that is mostly required because the major idea behind version control is that we need to store every logical change. All changes must have some meaning behind them.
+
+Q - Why do you think some version control systems, like Git, allow saving multiple filoes in one commit, while others, like Google Docs, treat each file separately?
+Ans - Version control systems deal with multiple versions of a single program. These versions may have more than one files. For examples a separate js, html and css file which means that the files would
+be separate but not necessarily independent. More often than not they will be interlinked. One change in file could lead to numerous changes in the other files which would mean that for such a change
+in the file, multiple files would be needed to be saved within one commit. Why? Because if you run a diff command on it later on, It would be different files that would need to be compared as different
+files need to be updated for a single change in one file.
+
+Q - How can you use the commands git log and git diff to view the history of files?
+Ans - Git log shows the history of all the commits done to a particular file/repository in git. The log has a short message for each specific commit made in the project and hence through that message
+we can get the git commit id. Once we have the commit id's for the changes, we can run the git diff command on the ids. The diff command would return the lines added and subtracted from the project in
+that particular commit 
