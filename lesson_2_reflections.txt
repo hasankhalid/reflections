@@ -10,4 +10,30 @@ Q - How is the staging area different from the working directory and the reposit
 Ans - The working directory is the directory which contains the files, these files are not a part of the repository
 as of yet. We can use the add command to add these files to the staging area and then commit them to the repo.
 The staging area serves as an intermediary where through git status we can check that all files to be
-committed do indeed reflect a logical change. 
+committed do indeed reflect a logical change.
+
+Q - How can you use the staging area to make sure you have one commit per logical change?
+Ans - The staging area can be used to check through the git diff command (without any arguments) to see
+the exact changes made in the working directory and the files waiting to be committed to the repository.
+Therefore it can be checked whether these changes represent a logical change or not.
+
+Q - What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Ans - Branching helps when we want to keep the main back bone of the program but branch out further, say we want to work on an accessibility mode front end, or we want to develop a new language UI, or we are testing
+an experimental feature, so on and so forth. In this case we use branching in the version control. The backbone master branch remains the same and we can retrieve it any time we want. While we can continue our
+development on the branch and add new features.
+
+Q - How do the diagrams help you visualize the branch structure?
+Ans - Diagrams help us illustrate branches. A star on the commit within the diagram would mean that the head right now is on that particular commit. But if git checkout just checkouts a commit ID, it means that we
+are in detached head state, what this means is that this particular commit ID is unreachable through any branch, be it the master or one of the branches that we have created ourselves. This means that if we later
+checkout to an existing branch, all the commits made through this detached head state would be lost. Why? Because the chain of commits would be unreachable. This is something which becomes quite intuitive to
+understand if we use a diagram.
+
+Q - What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Ans - The arrows go to both the parents as the merged branch, (even though a part of master branch) contains the information and history of both the parent branches. So the new merged child now in its log will show
+commits of each of the parent. The result of a merge is that it does not include a line that has been deleted by one user, it adds all the lines individually added by the users and the intersection remains as it is.
+
+Q - What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Ans - Automatic merging can lead to conflicts at times. Then we have to manually fix the conflicts and perform the merge. However the automatic merging (in case of no conflicts) is much more convenient and faster.
+Manual fixing of conflicts needs to be done in a case where lets assume there are two people working on a project and it has components A,B,C Person 1 changes it to A,B',C and person 2 changes it A,B'' and C. As both
+have changed the same component automatic merge would yield a conflict and it would manually need to be fixed. However merging files through git is a major win. If we do the entire process manually it is a very tedious
+task
