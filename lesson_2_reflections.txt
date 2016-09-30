@@ -1,0 +1,13 @@
+Q - What happens when you initialize a repository? Why do you need to do it?
+Ans - All Git repositories are like windows directories. The only difference is that they are supposed
+to contain metadata about the history of commits done in that particular repository. This metadata
+is mostly kept in a hidden folder inside the repository called .git. Once we initialize the repository
+it is in a head state, no commits have been made to it and it is not tracking the files inside the repository
+untill and unless we use the git add command to add the file to it. Git reset can be used to remove
+an already added file whereas git status tells us the status of tracked and untracked files
+
+Q - How is the staging area different from the working directory and the repository? What value do you think it offers?
+Ans - The working directory is the directory which contains the files, these files are not a part of the repository
+as of yet. We can use the add command to add these files to the staging area and then commit them to the repo.
+The staging area serves as an intermediary where through git status we can check that all files to be
+committed do indeed reflect a logical change. 
